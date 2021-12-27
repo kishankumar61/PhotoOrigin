@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>PhotoOrigin</title>
+      <link rel="icon" href="resource/photoorigin-logo.png"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+      
+       
+      
+       <!-- fontawesome -->
+      <link rel="stylesheet" href="resource/fontawesome/fontawesome.min.css" >
+      <script src="resource/fontawesome/fontawesome.min.js"></script>
+      <!-- fontawesome END -->
+
+      <!-- AOS CSS & Script -->
+      <script src="resource/aos/aos.js"></script>
+      <link rel="stylesheet" href="resource/aos/aos.css"/>
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="resource/custom.css"/>
+    <!-- custom css END-->
+
+      <meta name="author" content="Kishan Kumar"/>
+      <meta name="description" content="This is a Photographer website"/>
+      <meta name="keywords" content="best Photographer comapny in noida"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src='resource/photoorigin-logo.png' width="30px"/> Photo<span class="c-color font-weight-bold">Origin</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i class="fas fa-bars c-color"></i> Menu
+      </button>
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+        <!-- <ul class="navbar-nav mr-auto"> -->
+        <!-- <ul class="navbar-nav mx-auto"> -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>  
+        </ul>
+      </div>
+    </nav>
+    <section class="bg-dark p-4">
+      <iframe class="w-100" height="300px" src="https://www.google.com/maps/" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <section class="bg-warning">
+      <div class="row p-5 text-center">
+        <div class="col-sm-4" data-aos="fade-right"  data-aos-duration="1000">
+          <div class="card pt-4 c-card">
+            <h4>Call US</h4>
+            <p>9811xxxxxx, 7878xxxxxx</p>
+          </div>
+        </div>
+        <div class="col-sm-4" data-aos="fade-up"  data-aos-duration="1000">
+          <div class="card pt-4 c-card">
+            <h4>Email US</h4>
+            <p>9811xxxxxx, 7878xxxxxx</p>
+          </div>
+        </div>
+        <div class="col-sm-4" data-aos="fade-left"  data-aos-duration="1000">
+          <div  class="card pt-4 c-card">
+            <h4>Address</h4>
+          <p>Alpha 1, Greater Noida, Up</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-dark p-5 text-white">
+      <h3 class="text-uppercase text-center my-5">Contact US</h3>
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem illum voluptatibus fugit, temporibus dolorum culpa vitae? Alias obcaecati voluptatum, dolorem ea vero quibusdam ipsum quam porro, dolorum perferendis veritatis!</p>
+          <p><i class="fas fa-phone-square-alt text-warning"></i> 9811XXXXXX</p>
+          <p><i class="fas fa-envelope-square text-warning"></i> info@photoorigin.com</p>
+        </div>
+        <div class="col-sm-6">
+          <form method="post" name="google-sheet">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Enter name">
+              </div>
+              <div class="form-group col-md-2">
+                <select class="form-control" name="code" >
+                  <option>+91</option>
+                  <option>+93</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="tel" class="form-control" name="phone" pattern="[0-9]+" maxlength="10" placeholder="Enter phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="message" placeholder="Enter your message">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-warning w-100">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="p-3">
+      <div class="row px-4">
+        <div class="col-sm-6 text-left">
+          <p>
+            Designed by <a href="#" target="_blank">KISHAN. </a>
+            All rights reserved &copy;</p>
+        </div>
+        <div class="col-sm-6 text-right pr-5">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook text-warning"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram text-warning"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube text-warning"></i></a>
+        </div>
+      </div>
+    </footer>
+    <a id="btntop" ><i class="fa-2x  text-warning fas fa-arrow-circle-up"></i></a>
+  </body>
+
+  <script>
+    //script for scroll to top
+    $("#btntop").click(function () {
+        $("html, body").animate({scrollTop: 0}, 1000);
+      });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    //Script for GoogleSheet linking
+    
+    const scriptURL = 'YOUR KEY';
+      const form = document.forms['google-sheet'];
+      form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+      });
+  </script>
+  
+</html>
