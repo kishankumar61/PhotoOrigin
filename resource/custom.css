@@ -73,6 +73,7 @@ footer a{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    cursor: pointer;
 }
 .c-card{
     border: none;
